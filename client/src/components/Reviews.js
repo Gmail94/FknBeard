@@ -8,17 +8,17 @@ const reviewsData = [
     id: 1,
     star:5,
     title: "Great service!",
-    text: "I had a great experience with this company. The customer service was top-notch and my product arrived quickly.",
-    name: "George Kawaskaki",
-    date: "June 23, 2021",
+    text: "Awesome product, great smelling scents",
+    name: "Randy Baxter",
+    date: "November 8, 2021",
   },
   {
     id: 2,
     star:5,
     title: "Awesome product!",
-    text: "I'm really happy with my purchase. The quality is excellent and it was exactly what I was looking for.",
-    name: "Maureen Wong",
-    date: "June 23, 2021",
+    text: "Amazing quality! unique scents, very light feeling when applied! best beard oil I've tried!",
+    name: "Shawn Holder",
+    date: "January 28, 2022",
   },
   {
     id: 3,
@@ -32,17 +32,17 @@ const reviewsData = [
     id: 4,
     star:5,
     title: "Excellent experience",
-    text: "The ordering process was easy and the product arrived quickly. I'm very happy with my purchase.",
-    name: "Luke Skywalker",
-    date: "June 23, 2021",
+    text: "Received a bottle for Christmas of Biker’s Brew, smells great, feels great….Awesome product! Thank You!",
+    name: "Mike Tousignant",
+    date: "January 4, 2022",
   },
   {
     id: 5,
     star:5,
-    title: "Fantastic customer service",
-    text: "The customer service was excellent. They were very helpful and responsive to my questions.",
-    name: "Dougie Verdun",
-    date: "June 23, 2021",
+    title: "Dry Skin Remedy",
+    text: "I've always had an itchy face and beard but while using this product my skin has been much more soothed. Highly recommend",
+    name: "Liam Gilmore",
+    date: "March 31, 2023",
   },
   {
     id: 6,
@@ -94,9 +94,9 @@ const Reviews = () => {
       <ReviewsContainer>
         {visibleReviews.map(review => (
           <ReviewCard key={review.id}>
-            <>
-            {review.star}<AiOutlineStar />
-            </>
+            <Star>
+                <AiOutlineStar /><AiOutlineStar /><AiOutlineStar /><AiOutlineStar /><AiOutlineStar />
+            </Star>
             <ReviewTitle>{review.title}</ReviewTitle>
             <ReviewText>{review.text}</ReviewText>
             <ReviewName>- {review.name}</ReviewName>
@@ -121,7 +121,7 @@ const ReviewsContainer = styled.div`
 
 const ReviewCard = styled.div`
   width: 20%;
-  padding: 20px;
+  padding: 18px;
   margin: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -158,4 +158,9 @@ font-size: 14px;
 }
 `;
 
+const Star = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+`
 export default Reviews;

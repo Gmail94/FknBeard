@@ -1,8 +1,11 @@
+import Carousel from "./components/Carousel";
+
 
 const Products = () => {
 
     return (
         <>
+        <Carousel />
         <div>
             <h2>Products</h2>
             <h3>Natural Ingredients:</h3>

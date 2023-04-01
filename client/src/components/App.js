@@ -5,6 +5,7 @@ import About from "./About";
 import Products from "../Products";
 import Locations from "./Locations";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/locations" element={<Locations />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
